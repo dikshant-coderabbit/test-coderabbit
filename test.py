@@ -1,13 +1,7 @@
 from azure.identity import DefaultAzureCredential
 from azure.mgmt.containerregistry import ContainerRegistryManagementClient
 
-# Set your Azure subscription ID
-subscription_id = "<your-subscription-id>"
-
-# Initialize credentials and ACR client
-credential = DefaultAzureCredential()
-acr_client = ContainerRegistryManagementClient(credential, subscription_id)
-
+# Set your Azure subscr
 # List all container registries in the subscription
 registries = acr_client.registries.list()
 
